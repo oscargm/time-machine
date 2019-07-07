@@ -1,0 +1,45 @@
+{
+	"name": "time-machine",
+	"version": "0.0.1",
+	"description": "Time control app",
+	"main": "index.js",
+	"scripts": {
+		"start": "webpack-dev-server  --mode development --inline --hot --open",
+		"build": "webpack  --mode development",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/cli": "^7.1.2",
+		"@babel/core": "^7.1.2",
+		"@babel/preset-env": "^7.1.0",
+		"@types/react": "^16.8.8",
+		"awesome-typescript-loader": "^5.2.1",
+		"babel-loader": "^8.0.4",
+		"css-loader": "^1.0.0",
+		"file-loader": "^2.0.0",
+		"html-webpack-plugin": "^3.2.0",
+		"mini-css-extract-plugin": "^0.4.3",
+		"redux-devtools-extension": "^2.13.8",
+		"redux-logger": "^3.0.6",
+		"style-loader": "^0.23.1",
+		"typescript": "^3.1.1",
+		"url-loader": "^1.1.1",
+		"webpack": "^4.20.2",
+		"webpack-cli": "^3.1.2",
+		"webpack-dev-server": "^3.1.14"
+	},
+	"dependencies": {
+		"@types/node": "^10.12.18",
+		"axios": "^0.18.0",
+		"list-react-files": "^0.2.0",
+		"react": "^16.5.2",
+		"react-dom": "^16.5.2",
+		"react-redux": "^7.1.0",
+		"react-router-dom": "^4.3.1",
+		"redux": "^4.0.1",
+		"redux-saga": "^1.0.5",
+		"reselect": "^4.0.0"
+	}
+}

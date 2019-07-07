@@ -1,0 +1,15 @@
+#login-form {
+    width: 300px;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around
+}
+
+#login-form span {
+    padding-right: 2rem;
+}
+
+#login-form button {
+    padding: 0.25rem;
+}
