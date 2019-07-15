@@ -1,8 +1,11 @@
 import * as React from "react";
 import "./login-styles.css";
 import { ValidationValue } from "../../../common";
+import { WithSession } from "../../core/session/hoc/with-session";
+import { routes } from "../../core/navigator";
 
-interface LoginFormProps {
+interface LoginFormProps extends WithSession {
+  history: any;
   username: ValidationValue<string>;
   password: ValidationValue<string>;
   updateField: (
@@ -10,11 +13,16 @@ interface LoginFormProps {
     validationKey: string,
     newValue: string
   ) => void;
-  onLogin: () => void;
+  onLogin: (username: string, password: string) => void;
 }
 
 export const LoginFormComponent = (props: LoginFormProps) => {
-  const { username, password, updateField, onLogin } = props;
+  const { username, password, updateField, onLogin, history, logedIn } = props;
+  React.useEffect(() => {
+    if (logedIn) {
+      history.push(routes.DASHBOARD);
+    }
+  }, [logedIn]);
   return (
     <>
       <div id="login-form">
@@ -36,7 +44,12 @@ export const LoginFormComponent = (props: LoginFormProps) => {
           }
         />
         {password.error && <span>{password.errorMessage}</span>}
-        <button onClick={onLogin}>Enter</button>
+        <button
+          onClick={() => onLogin(username.value, password.value)}
+          disabled={username.error || password.error}
+        >
+          Enter
+        </button>
       </div>
     </>
   );

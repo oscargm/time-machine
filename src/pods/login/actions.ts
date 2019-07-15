@@ -38,13 +38,12 @@ export const updateValidatedField = (
   }
 });
 
-export const login = () => ({
-  type: actionIds.LOGIN_ACTION
-});
-
-export const loginSuccess = (userToken: string): BaseAction<string> => ({
-  type: actionIds.LOGIN_SUCCESS,
-  payload: userToken
+export const login = (username: string, password: string) => ({
+  type: actionIds.LOGIN_ACTION,
+  payload: {
+    username,
+    password
+  }
 });
 
 export const loginFailed = (errorMessage: string): BaseAction<string> => ({

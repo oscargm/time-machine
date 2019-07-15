@@ -1,6 +1,6 @@
 import * as React from "react";
 
-export const DashBoard = () => (
+export const Dashboard = () => (
   <section id={"container"}>
     <section id={"header"}>
       <h1>Time machine</h1>

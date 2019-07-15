@@ -6,19 +6,17 @@ const defaultState = (): Login => ({
   username: {
     value: "",
     validationKey: ValidationKeys.USERNAME,
-    error: false,
-    errorMessage: ""
+    error: true,
+    errorMessage: "Wrong username"
   },
   password: {
     value: "",
     validationKey: ValidationKeys.PASSWORD,
-    error: false,
-    errorMessage: ""
+    error: true,
+    errorMessage: "Wrong password"
   },
   error: false,
-  errorMessage: "",
-  logedIn: false,
-  userToken: ""
+  errorMessage: ""
 });
 
 export const loginReducer = (
@@ -35,14 +33,6 @@ export const loginReducer = (
           error: action.payload.error,
           errorMessage: action.payload.errorMessage
         }
-      };
-    case actionIds.LOGIN_SUCCESS:
-      return {
-        ...state,
-        logedIn: true,
-        userToken: action.payload,
-        error: false,
-        errorMessage: ""
       };
     case actionIds.LOGIN_FAILED:
       return {

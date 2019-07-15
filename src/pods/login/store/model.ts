@@ -4,6 +4,4 @@ export interface Login {
   password: ValidationValue<string>;
   error: boolean;
   errorMessage?: string;
-  logedIn: boolean;
-  userToken?: string;
 }
