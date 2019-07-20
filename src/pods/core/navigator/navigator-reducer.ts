@@ -1,14 +1,21 @@
 import { history } from "../../../history";
 import { BaseAction } from "../../../common";
 import { actionIds, routes } from "./consts";
+import { Navigation } from "./store/model";
 
-export const loginReducer = (action: BaseAction<any>) => {
+const defaultState = (): Navigation => ({
+  routeHistory: []
+});
+
+export const navigatorReducer = (state = defaultState(), action: BaseAction<any>) => {
   switch (action.type) {
     case actionIds.NAVIGATE_TO_DASHBOARD:
-      history.push(routes.DASHBOARD);
-      break;
+      console.log('blablabla', action);
+      console.log('blablabla', history);
+      //      history.push(routes.DASHBOARD);
+      return { ...state, routeHistory: state.routeHistory.concat(routes.DASHBOARD) };
     default:
-      history.push(routes.LANDING);
-      break;
+      //      history.push(routes.LANDING);
+      return { ...state, routeHistory: state.routeHistory.concat(routes.LANDING) };
   }
 };

@@ -1,14 +1,18 @@
 import * as React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { LoginPage, Dashboard } from "./scenes";
+import { Provider } from "react-redux";
+import { Router, Switch, Route, } from "react-router-dom";
 import { history } from "./history";
+import { store } from "./store";
 import { routes } from "./pods/core/navigator";
+import { LoginPage, Dashboard } from "./scenes";
 
 export const App = () => (
-  <Router history={history}>
-    <Switch>
-      <Route exact={true} path={routes.LANDING} component={LoginPage} />
-      <Route exact={true} path={routes.DASHBOARD} component={Dashboard} />
-    </Switch>
-  </Router>
+  <Provider store={store}>
+    <Router history={history}>
+      <Switch>
+        <Route exact={true} path={routes.LANDING} component={LoginPage} />
+        <Route path={routes.DASHBOARD} component={Dashboard} />
+      </Switch>
+    </Router>
+  </Provider>
 );

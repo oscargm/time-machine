@@ -1,6 +1,6 @@
 import { actionIds } from "./consts";
 import { takeLatest, put, call } from "@redux-saga/core/effects";
-import { loginFailed, updateValidatedField } from "./actions";
+import { updateValidatedField } from "./actions";
 import {
   BaseAction,
   ValidationKeys,
@@ -9,14 +9,12 @@ import {
   validatePassword
 } from "../../common";
 import { createNewSession } from "../core/session/sagas";
-import { navigateToDashboard, routes } from "../core/navigator";
-import { history } from "../../history";
+import { navigateToDashboard } from "../core/navigator";
+
+
 function* submitLogin(action) {
-  // yield put(loginFailed("Wrong username or password"));
-  console.log("action", action);
   yield call(createNewSession, "token", action.payload.username);
-  //yield put(navigateToDashboard());
-  history.push(routes.DASHBOARD);
+  yield put(navigateToDashboard());
 }
 
 function* validateField(
