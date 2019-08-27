@@ -1,7 +1,7 @@
 import { createSelector } from "reselect";
 import { Login } from "./store/model";
 import { key } from "./consts";
-import { ValidationValue } from "../../common";
+import { ValidationValue } from "@common";
 
 const loginSelector = (state: Login) => {
   return state[key];

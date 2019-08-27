@@ -1,4 +1,4 @@
-import { BaseAction, ValidationValue } from "../../common";
+import { BaseAction } from "@common";
 import { actionIds } from "./consts";
 
 export const validateField = (

@@ -7,10 +7,9 @@ import {
   ValidationResult,
   validateUsername,
   validatePassword
-} from "../../common";
-import { createNewSession } from "../core/session/sagas";
-import { navigateToDashboard } from "../core/navigator";
-
+} from "@common";
+import { createNewSession } from "@pods/core/session/sagas";
+import { navigateToDashboard } from "@pods/core/navigator";
 
 function* submitLogin(action) {
   yield call(createNewSession, "token", action.payload.username);

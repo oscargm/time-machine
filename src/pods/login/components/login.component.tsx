@@ -1,8 +1,8 @@
 import * as React from "react";
 import "./login-styles.css";
-import { ValidationValue } from "../../../common";
-import { WithSession } from "../../core/session/hoc/with-session";
-import { routes } from "../../core/navigator";
+import { ValidationValue } from "@common";
+import { WithSession } from "@pods/core/session/hoc/with-session";
+import { routes } from "@pods/core/navigator";
 
 interface LoginFormProps extends WithSession {
   history: any;

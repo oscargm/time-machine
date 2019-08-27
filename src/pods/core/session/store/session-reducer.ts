@@ -1,4 +1,4 @@
-import { BaseAction } from "../../../../common";
+import { BaseAction } from "@common";
 import { Session } from "./model";
 import { actionIds } from "../consts";
 

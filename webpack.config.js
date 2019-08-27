@@ -9,11 +9,15 @@ module.exports = {
   resolve: {
     extensions: [".js", ".ts", ".tsx"],
     alias: {
-      common: path.resolve(__dirname, "src/common"),
-      pods: path.resolve(__dirname, "src/pods")
+      "@app": path.resolve(__dirname, "src"),
+      "@common": path.resolve(__dirname, "src/common"),
+      "@pods": path.resolve(__dirname, "src/pods"),
+      "@scenes": path.resolve(__dirname, "src/scenes")
     }
   },
-  node: { fs: "empty" },
+  node: {
+    fs: "empty"
+  },
   entry: "./main.tsx",
   output: {
     path: path.join(basePath, "dist"),
@@ -28,8 +32,7 @@ module.exports = {
     stats: "errors-only"
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
         loader: "awesome-typescript-loader",

@@ -1,7 +1,13 @@
 {
   "compilerOptions": {
-      "baseUrl": ".",
-      "paths": { "*": ["types/*"] },
+    "baseUrl": ".",
+    "paths": {
+      "*": ["types/*"],
+      "@app/*": ["src/*"],
+      "@pods/*": ["src/pods/*"],
+      "@scenes": ["src/scenes"],
+      "@common": ["src/common"]
+    },
     "target": "es6",
     "module": "es6",
     "moduleResolution": "node",

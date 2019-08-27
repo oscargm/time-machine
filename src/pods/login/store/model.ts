@@ -1,4 +1,4 @@
-import { ValidationValue } from "../../../common/types";
+import { ValidationValue } from "@common";
 export interface Login {
   username: ValidationValue<string>;
   password: ValidationValue<string>;

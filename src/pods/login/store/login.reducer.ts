@@ -1,7 +1,7 @@
 import { Login } from "./model";
-import { BaseAction } from "../../../common";
+import { BaseAction } from "@common";
 import { actionIds } from "../consts";
-import { ValidationKeys } from "../../../common";
+import { ValidationKeys } from "@common";
 const defaultState = (): Login => ({
   username: {
     value: "",

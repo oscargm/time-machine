@@ -1,4 +1,4 @@
-import { BaseAction } from "../../../../src/common";
+import { BaseAction } from "@common";
 import { actionIds } from "./consts";
 export const createSession = (
   token: string,
