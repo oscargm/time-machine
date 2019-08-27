@@ -44,7 +44,7 @@ function* validateField(
   );
 }
 
-export function* loginRootSaga() {
+export function* loginFormRootSaga() {
   yield takeLatest(actionIds.VALIDATE_FIELD, validateField);
   yield takeLatest(actionIds.LOGIN_ACTION, submitLogin);
 }

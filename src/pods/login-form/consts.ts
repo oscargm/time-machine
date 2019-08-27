@@ -6,4 +6,4 @@ export const actionIds = {
   LOGIN_FAILED: "[Login] [5] Login failed"
 };
 
-export const key = "login";
+export const key = "login-form";

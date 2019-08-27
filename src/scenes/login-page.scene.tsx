@@ -1,5 +1,5 @@
 import * as React from "react";
-import { LoginForm } from "@pods/login";
+import { LoginForm } from "@app/pods/login-form";
 
 export const LoginPage = () => (
   <section id={"container"}>

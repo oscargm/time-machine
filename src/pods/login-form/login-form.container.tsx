@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import { withRouter } from "react-router";
-import { LoginFormComponent } from "./components/login.component";
+import { LoginFormComponent } from "./components/login-form.component";
 import { validateField, login } from "./actions";
 import { getUsername, getPassword } from "./selectors";
 import { withSession } from "../core/session";

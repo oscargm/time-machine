@@ -1,10 +1,10 @@
 import { combineReducers } from "redux";
-import { loginKey, loginReducer } from "@pods/login";
+import { loginFormKey, loginReducer } from "@app/pods/login-form";
 import { sessionKey, sessionReducer } from "@pods/core/session";
 import { navigatorKey, navigatorReducer } from "@pods/core/navigator";
 
 export default combineReducers({
-  [loginKey]: loginReducer,
+  [loginFormKey]: loginReducer,
   [sessionKey]: sessionReducer,
   [navigatorKey]: navigatorReducer
 });
