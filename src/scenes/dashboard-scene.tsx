@@ -1,5 +1,6 @@
 import * as React from "react";
 import { User } from "@pods/user";
+import { BookingList } from "@app/pods/booking-list";
 
 export const Dashboard = () => (
   <section id={"container"}>
@@ -8,7 +9,7 @@ export const Dashboard = () => (
       <User />
     </section>
     <section id={"content"}>
-      <h2>hello!</h2>
+      <BookingList />
     </section>
   </section>
 );

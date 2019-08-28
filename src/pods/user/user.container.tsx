@@ -8,7 +8,6 @@ const UserContainer = (props: UserContainerProps) => {
     <>
       <h3>User</h3>
       <UserLoginInfo />
-      {/* <UserBookingList/> */}
     </>
   );
 };

@@ -9,7 +9,7 @@ const UserLoginInfoContainer = (props: UserLoginInfoContainerProps) => {
     <>
       {logedIn && (
         <ul>
-          <li>Username: {logedUsername}</li>
+          <li>Hello {logedUsername}</li>
           <li>Loged in since: {logedInSince.toLocaleString()}</li>
           <li>Token: {token}</li>
         </ul>
