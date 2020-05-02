@@ -1,0 +1,9 @@
+.booking-button {
+  border-radius: 18px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  color: white;
+  border: 1px solid black;
+  box-sizing: border-box;
+  cursor: pointer;
+}

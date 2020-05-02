@@ -1,0 +1,28 @@
+.table {
+  display: table;
+}
+.table,
+.table-head,
+.table-body,
+.table-row {
+  width: 100%;
+}
+.table-cell {
+  padding: 1rem;
+  border: 1px solid black;
+}
+.table-head {
+  display: table-header-group;
+}
+.table-header-column {
+  display: table-cell;
+}
+.table-body {
+  display: table-row-group;
+}
+.table-row {
+  display: table-row;
+}
+.table-cell {
+  display: table-cell;
+}
